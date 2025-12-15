@@ -7,5 +7,7 @@ export default defineConfig({
     plugins: [
         react(),
         tailwindcss()
+
     ],
+    base: '/dark-mode-api/' // <-- bu vacibdir
 })
