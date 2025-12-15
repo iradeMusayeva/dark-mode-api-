@@ -1,0 +1,146 @@
+#cloths-section {
+    background: url("https://preview.colorlib.com/theme/tailor/assets/img/hero/h1_hero.png.webp")center center/cover no-repeat;
+    height: 100vh;
+    position: relative;
+    z-index: 0;
+    padding: 50px 0px;
+    .cloths {
+        .cloths-left {
+            padding: 100px 0px;
+            color: white;
+            z-index: 2;
+            text-align: left;
+            .clot-img-around {
+                img {
+                    width: 100%;
+                    width: 100%;
+                }
+                width: 90px;
+                height: 90px;
+                border-radius: 50%;
+                animation: rotate360 10s linear infinite;
+            }
+            h2 {
+                font-size: 56px;
+            }
+            p {
+                width: 60%;
+            }
+        }
+        .cloths-right {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 700px;
+            height: 729px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(16, 26, 48, 0.7) 0%, rgba(16, 26, 48, 0.7) 12%, #101a31 91%, #101a31 100%);
+        z-index: -1;
+    }
+}
+
+#sliders {
+    padding: 40px 0;
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    // Slick Slider əsasları
+    .slick-slider {
+        padding: 10px 0;
+    }
+    .slick-slide {
+        padding: 10px; // Slider elementlərinin arasına boşluq
+    }
+    // 🔥 Slider kartı
+    .slider {
+        background: #fff;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        border: 1px solid #eee;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+        }
+        // 🔥 Şəkil qismi tam nested
+        .slider-img {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+            img {
+                width: 160px;
+                height: 160px;
+                object-fit: contain;
+            }
+        }
+        // 🔥 Content tam nested
+        .slider-content {
+            .title {
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 8px;
+                height: 40px;
+                overflow: hidden;
+            }
+            .description {
+                font-size: 14px;
+                color: #666;
+                height: 60px;
+                overflow: hidden;
+                margin-bottom: 12px;
+            }
+            .price {
+                font-size: 20px;
+                font-weight: bold;
+                color: #000;
+            }
+        }
+    }
+    // 🔥 Slick arrows
+    .slick-prev:before,
+    .slick-next:before {
+        color: #000;
+        font-size: 28px;
+    }
+    // 🔥 Slick dots
+    .slick-dots {
+        li {
+            button:before {
+                font-size: 10px;
+                color: #000;
+            }
+            &.slick-active button:before {
+                color: #000;
+            }
+        }
+    }
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
